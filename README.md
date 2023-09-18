@@ -4,11 +4,13 @@
 In this project, we compare numerous effective existing forecast models with the recently developed transformer, namely Informer, which is the state-of-the-art machine learning techniques. This marks the first application of this model to sequential dissolved oxygen forecasting. 
 
 ## How to use
-1. Download real-time water quality measurements from Meteor Data Cloud at "https://telemetry-data.com/viewer2", by environmnental agency, where you can choose the river and, time sapn and water quality indicators. This project focused on analysing data from the Thames River between 01/12/2017-01/12/2022, but the methodology can be applied similarly to other rivers.
+1. Download real-time water quality measurements from the Meteor Data Cloud at "https://telemetry-data.com/viewer2," provided by the environmental agency. Choose the river, time span, and water quality indicators as needed. This project specifically focuses on data from the Thames River between December 1, 2017, and December 1, 2022, but the methodology can be extended to other rivers.
 
-2. Process the data. the data has to undergo robust filtering to remove faulty measurements. Import the data to dataframe.ipynb and save the cleansed data.
+2. Process the data: Import the raw data into a Jupyter Notebook file named *dataframe.ipynb*. Apply robust filtering techniques to remove any faulty or inaccurate measurements. Save the cleaned data for further analysis.
 
-3. Select the dataset from one particluar site, and import to the time_series_forecasting.ipynb. After running 10 times, calculate the average of the mean absolute error for the performance.
+3. Choose a specific dataset from one site and import it into another Jupyter Notebook file named time_series_forecasting.ipynb. Execute the notebook ten times and calculate the average of the mean absolute error (MAE) to evaluate model performance.
 
-4. Finnaly,import the data to Informer.ipyynb 
+4. Finnaly,import the data to *Informer2020* folder, and run the *informer.ipynb*, where you can set the input, label and prediction lengths. The performance evaluation will be saved in the *metrics.npy* in the *results* folder.
+
+5. Compare the MAE from all models and deduce the model with the best predictive capability.
 

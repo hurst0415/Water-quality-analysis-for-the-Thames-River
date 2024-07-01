@@ -50,13 +50,13 @@ Save the cleaned data in your folder for further analysis.
 
 ## Superstatistical analysis
 ### Statistical Anlysis
-Run the Stat
+Run the "Statistical_analysis.ipynb" notebook to visualize the trajectories and probability density functions (PDFs) of the time series data from the measured sites.
 
 ### Detrending
 Our approach focuses on describing fluctuations around the mean rather than modeling the complete distribution. Execute the notebooks "Detrending-additive.ipynb" and "Detrending-multiplicative.ipynb" for additive and multiplicative detrending methods, respectively.
 
 ### Superstatistical Results
-The fluctuations deduced from the detrending methods can be well modeled by q-Gaussian distributions, as demonstrated by the results in "Detrending-additive" and "Detrending-multiplicative". Save the log-likelihood results and parameters for the best-fitting q-Gaussians, then run "Superstatistical results.ipynb". This notebook compares the robustness of different detrending methods and displays the spatial plot of parameters.
+The fluctuations deduced from the detrending methods can be well modeled by q-Gaussian distributions, as demonstrated by the results in "Detrending-additive.ipynb" and "Detrending-multiplicative.ipynb". Save the log-likelihood results and parameters for the best-fitting q-Gaussians, then run "Superstatistical results.ipynb". This notebook compares the robustness of different detrending methods and displays the spatial plot of parameters.
 
 
 ## Regression analysis

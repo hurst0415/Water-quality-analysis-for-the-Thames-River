@@ -3,6 +3,21 @@
 ## Introduction
 In this project, we employ superstatistical methods and machine learning to analyze measured time series data of water quality indicators from the River Thames. Particular emphasis is placed on unraveling the complex underlying dynamics of water quality indicators.
 
+## Requirements
+Python 3.9
+numpy==1.20.1
+pandas==1.2.3
+scikit-learn==1.4.2
+matplotlib==3.3.4
+seaborn==0.13.2
+tensorflow==2.11.0
+lightgbm==3.3.5
+xgboost==1.7.3
+torch==2.0.0
+
+To install the required dependencies, use the following command:
+pip install -r requirements.txt
+
 ## Data
 Download real-time water quality measurements from the Meteor Data Cloud at "https://telemetry-data.com/viewer2," provided by the Environmental Agency. Contact the agency directly to obtain the necessary access credentials. Choose the river, time span, and water quality indicators as needed. This project specifically focuses on data from the Thames River between December 1, 2017, and December 1, 2022, but the methodology can be extended to other rivers.
 
@@ -27,14 +42,21 @@ oxygen pumped into the river from a boat in August 2022.
 4. COND measurements in ms/cm unit, change to us/cm.
 5. Remove data outages, which were caused by sonde changes.
 
-Save the cleaned data for further analysis.
+Save the cleaned data in your folder for further analysis.
 
 
 ## Superstatistical analysis
 ### Detrending
+Rather than modeling the complete distribution, including its daily and seasonal variations, our approach here is centered on describing the fluctuations around the mean. Run the notebook "" and "" respectively for additive and multiplicative detrending methods
+
+###
+Superstatistical results
+
+
 
 
 ## Regression analysis
+
 In this section, we compare the LGBM regression model to the XGBoost and linear regression baselines, in both SMAPE and the SHAP values of each of the features. Each model has its own notebook file: LGBM_basic.ipynb for LGBM regression, XGBoost_baseline.ipynb for XGBoost, and Linear_Regression_baseline.ipynb for linear regression. For each method, set the path to your local path to the site data being tested and uncomment the appropriate features.
 
 

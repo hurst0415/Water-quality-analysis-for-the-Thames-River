@@ -4,19 +4,21 @@
 In this project, we employ superstatistical methods and machine learning to analyze measured time series data of water quality indicators from the River Thames. Particular emphasis is placed on unraveling the complex underlying dynamics of water quality indicators.
 
 ## Requirements
-Python 3.9
-numpy==1.20.1
-pandas==1.2.3
-scikit-learn==1.4.2
-matplotlib==3.3.4
-seaborn==0.13.2
-tensorflow==2.11.0
-lightgbm==3.3.5
-xgboost==1.7.3
-torch==2.0.0
+* Python 3.9
+* numpy==1.20.1
+* pandas==1.2.3
+* scikit-learn==1.4.2
+* matplotlib==3.3.4
+* seaborn==0.13.2
+* tensorflow==2.11.0
+* lightgbm==3.3.5
+* xgboost==1.7.3
+* torch==2.0.0
 
 To install the required dependencies, use the following command:
+```bash
 pip install -r requirements.txt
+```
 
 ## Data
 Download real-time water quality measurements from the Meteor Data Cloud at "https://telemetry-data.com/viewer2," provided by the Environmental Agency. Contact the agency directly to obtain the necessary access credentials. Choose the river, time span, and water quality indicators as needed. This project specifically focuses on data from the Thames River between December 1, 2017, and December 1, 2022, but the methodology can be extended to other rivers.
@@ -30,6 +32,7 @@ In our project, we use the following water quality indicators:
 5. Ammonium (AMMONIUM), measured in milligrams per liter (mg/L).
 6. Turbidity (TURBIDITY), measured in nephelometric turbidity units (NTU).
 
+For a geographical overview of our water quality monitoring sites as well as rainfall collection sites along the River Thames, run Map.ipynb to recreate the interactive HTML map. You can hover over the map to check locations.
 
 ## The data processing
 Process the data: Import the raw data into the Jupyter Notebook file named *dataframe.ipynb*. Apply robust filtering techniques to remove any faulty or inaccurate measurements. 
@@ -46,13 +49,14 @@ Save the cleaned data in your folder for further analysis.
 
 
 ## Superstatistical analysis
+### Statistical Anlysis
+Run the Stat
+
 ### Detrending
-Rather than modeling the complete distribution, including its daily and seasonal variations, our approach here is centered on describing the fluctuations around the mean. Run the notebook "" and "" respectively for additive and multiplicative detrending methods
+Our approach focuses on describing fluctuations around the mean rather than modeling the complete distribution. Execute the notebooks "Detrending-additive.ipynb" and "Detrending-multiplicative.ipynb" for additive and multiplicative detrending methods, respectively.
 
-###
-Superstatistical results
-
-
+### Superstatistical Results
+The fluctuations deduced from the detrending methods can be well modeled by q-Gaussian distributions, as demonstrated by the results in "Detrending-additive" and "Detrending-multiplicative". Save the log-likelihood results and parameters for the best-fitting q-Gaussians, then run "Superstatistical results.ipynb". This notebook compares the robustness of different detrending methods and displays the spatial plot of parameters.
 
 
 ## Regression analysis

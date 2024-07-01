@@ -32,7 +32,7 @@ Process the data: Import the raw data into the Jupyter Notebook file named *data
 
 
 ## Regression analysis
-
+In this section, we compare the LGBM regression model to the XGBoost and linear regression baselines, in both SMAPE and the SHAP values of each of the features. For each method, set the path to your local path to the site data being tested and uncomment the appropriate features.
 
 
 

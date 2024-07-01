@@ -15,6 +15,9 @@ In our project, we use the following water quality indicators:
 5. Ammonium (AMMONIUM), measured in milligrams per liter (mg/L).
 6. Turbidity (TURBIDITY), measured in nephelometric turbidity units (NTU).
 
+
+## The data processing
+Process the data: Import the raw data into the Jupyter Notebook file named *dataframe.ipynb*. Apply robust filtering techniques to remove any faulty or inaccurate measurements. 
 The data sets retrieved contain several problems. Below are some of the main issues and the ways in which we rectify them:
 1. DO and DO-MGL parameters not considered, instead use the DOO-MGL parameter measured with an optical optode for more reliable data. 'DOO-MGL' is equivalent to the commonly known 'DO' in this project.
 1. DO measurements exceeding 25mg/L are deemed faulty and discarded, as achieving a concentration as high as 25mg/L is generally unlikely under standard conditions.
@@ -24,11 +27,11 @@ oxygen pumped into the river from a boat in August 2022.
 4. COND measurements in ms/cm unit, change to us/cm.
 5. Remove data outages, which were caused by sonde changes.
 
-## The data processing
-Process the data: Import the raw data into the Jupyter Notebook file named *dataframe.ipynb*. Apply robust filtering techniques to remove any faulty or inaccurate measurements. Save the cleaned data for further analysis.
+Save the cleaned data for further analysis.
+
 
 ## Superstatistical analysis
-
+### Detrending
 
 
 ## Regression analysis

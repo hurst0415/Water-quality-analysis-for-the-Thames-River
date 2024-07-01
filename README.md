@@ -8,16 +8,21 @@ Download real-time water quality measurements from the Meteor Data Cloud at "htt
 
 In our project, we use the following water quality indicators:
 
-1. Dissolved oxygen (DO) refers to the concentration of oxygen gas incorporated in water, vital for
-aquatic life, measured in milligrams per liter (mg/L).
-2. Temperature (Temp) is a local temperature measured in degrees Celsius (°C).
-3. Electrical conductivity denotes the ability of a material to conduct an electrical charge, measured
-in microsiemens per centimeter (μS/cm).
-4. pH (PH) indicates the acidity or alkalinity of a solution, using the pH scale ranging from 0 to 14.
-5. Ammonium (AMMONIUM) refers to the concentration of ammonium ions, a measure of nitrogen
-pollution in water, measured in milligrams per liter (mg/L).
-6. Turbidity (TURBIDITY) refers to the cloudiness or haziness of a fluid caused by large numbers of
-individual particles, measured in nephelometric turbidity units (NTU).
+1. Dissolved oxygen (DO), measured in milligrams per liter (mg/L).
+2. Temperature (Temp), measured in degrees Celsius (°C).
+3. Electrical conductivity (COND), measured in microsiemens per centimeter (μS/cm).
+4. pH (PH), ranging from 0 to 14.
+5. Ammonium (AMMONIUM), measured in milligrams per liter (mg/L).
+6. Turbidity (TURBIDITY), measured in nephelometric turbidity units (NTU).
+
+The data sets retrieved contain several problems, some of the main issues which we rectify in the following way:
+1. DO and DO-MGL parameters not considered, instead use the DOO-MGL parameter measured with an optical optode for more reliable data. 'DOO-MGL' is equivalent to the commonly known 'DO' in this project.
+1. DO measurements exceeding 25mg/L are deemed faulty and discarded, as achieving a concentration as high as 25mg/L is generally unlikely under standard conditions.
+2. We remove non-positive measurements for ’COND’, ’PH’, ’AMMONIUM’, ’Turbidity’ and ’DO’ indicators.
+3. Remove large spikes and sudden dropouts due to probe faults or human activities, such as the
+oxygen pumped into the river from a boat in August 2022.
+4. COND measurements in ms/cm unit, change to us/cm.
+5. Remove data outages, which were caused by sonde changes.
 
 ## The data processing
 Process the data: Import the raw data into the Jupyter Notebook file named *dataframe.ipynb*. Apply robust filtering techniques to remove any faulty or inaccurate measurements. Save the cleaned data for further analysis.

@@ -32,7 +32,7 @@ In our project, we use the following water quality indicators:
 5. Ammonium (AMMONIUM), measured in milligrams per liter (mg/L).
 6. Turbidity (TURBIDITY), measured in nephelometric turbidity units (NTU).
 
-For a geographical overview of our water quality monitoring sites as well as rainfall collection sites along the River Thames, run Map.ipynb to recreate the interactive HTML map. You can open Sites_map.html and hover over the map to check locations.
+For a geographical overview of our water quality monitoring sites as well as rainfall collection sites along the River Thames, run Map.ipynb to recreate the interactive HTML map. You can hover over the map to check locations.
 
 ## The data processing
 Process the data: Import the raw data into the Jupyter Notebook file named *dataframe.ipynb*. Apply robust filtering techniques to remove any faulty or inaccurate measurements. 

@@ -47,6 +47,8 @@ oxygen pumped into the river from a boat in August 2022.
 
 Save the cleaned data in your folder for further analysis.
 
+Here is a table showing the descriptive statistics of cleaned DO levels data for different sites:
+![Descriptive Statistics](https://github.com/hurst0415/Water-quality-analysis-for-the-Thames-River/blob/main/stats.png?raw=true)
 
 ## Superstatistical analysis
 ### Statistical Anlysis
